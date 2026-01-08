@@ -1,0 +1,882 @@
+@font-face {
+    font-family: top;
+    src: url(./MonumentExtended-Regular.ttf);
+}
+
+@font-face {
+    font-family: left;
+    src: url(./NimbusSanL-Reg.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: #F8F8F8;
+    position: relative;
+    padding-top: 0.1px;
+}
+
+#nav {
+    height: 10vh;
+    width: 100%;
+    margin-top: 35px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav h1 {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: top;
+    font-size: 3vw;
+    position: relative;
+    letter-spacing: -1.6px;
+    padding-right: 7vw;
+    cursor: pointer;
+}
+
+#nav h1::after {
+    content: "©";
+    position: absolute;
+    font-family: gilroy;
+    font-size: 1.2vw;
+    top: 12%;
+    right: 32%;
+    font-weight: 400;
+    color: black;
+}
+
+#nav h1::before {
+    content: "model management";
+    position: absolute;
+    font-weight: 400;
+    font-family: gilroy;
+    letter-spacing: .1px;
+    font-size: 1vw;
+    bottom: 10%;
+    right: 39%;
+}
+
+#nav h2 {
+    height: 100%;
+    width: 24%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid black;
+    font-size: 1.1vw;
+    font-weight: 500;
+    padding-right: 3vw;
+    font-family: left;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#nav h2:nth-last-child(1) {
+    width: 10%;
+}
+
+#nav h2:nth-last-child(2) {
+    width: 26%;
+    padding-left: 1.9vw;
+}
+
+#nav h2:nth-last-child(3) {
+    width: 17%;
+    padding-left: 1.9vw;
+}
+
+#nav h2:nth-last-child(4) {
+    width: 17%;
+    padding-left: 4vw;
+}
+
+#center {
+    height: 80%;
+    width: 100%;
+    position: relative;
+    padding: 3vw;
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#content video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#overlay {
+    height: 54%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 3vw;
+    color: white;
+}
+
+#over1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2.5vw;
+}
+
+#over1 h1 {
+    font-size: 3vw;
+    font-family: top;
+    cursor: pointer;
+}
+
+#over1 h2 {
+    font-size: 1.3vw;
+    padding: 2vw 2.2vw;
+    border-radius: 50%;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#over2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid white;
+    padding: 3vw 0;
+}
+
+#over2 h4 {
+    font-size: 1vw;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#over2 img {
+    height: 5vw;
+}
+
+#scroll {
+    height: 35vh;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#container {
+    height: 100%;
+    width: fit-content;
+    display: inline-block;
+    padding: 1vw;
+    animation-name: move;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#container img {
+    height: 90%;
+    width: 15vw;
+    object-fit: cover;
+    object-position: 30% 30%;
+    margin: 2vw;
+    border-radius: 50%;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#alphabet {
+    display: flex;
+    height: 8vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1.72vw;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#alphabet h4 {
+    font-size: 1vw;
+    font-weight: 300;
+    font-style: italic;
+    padding: .2vw .4vw;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+#alphabet h4:hover {
+    border: 1px solid black;
+}
+
+#alphabet h3 {
+    font-size: 1.4vw;
+    letter-spacing: .3vw;
+    font-style: italic;
+    border-bottom: 1px solid black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#girls_photo {
+    height: 110vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6vh 7vh;
+}
+
+#photo_1 {
+    height: 100%;
+    width: 55%;
+}
+
+#last {
+    padding-left: 2vw;
+    padding-top: 1.7vw;
+}
+
+#last h2 {
+    font-size: 3vw;
+    letter-spacing: -1.8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: top;
+}
+
+#photo_1 img {
+    height: 94%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding-left: 2vw;
+}
+
+#photo_2 {
+    height: 100%;
+    width: 42%;
+}
+
+#photo_2 img {
+    height: 78%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    padding-right: 4vw;
+}
+
+#para {
+    display: flex;
+    padding-top: .7vw;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#para h4 {
+    text-align: left;
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+#para h5 {
+    padding-right: 4vw;
+    font-weight: 200;
+    text-align: right;
+    font-size: .80vw;
+}
+
+#arrow {
+    height: 70vh;
+    width: 100%;
+    position: relative;
+}
+
+#writting {
+    height: 100%;
+    width: 40%;
+    position: relative;
+}
+
+#first {
+    position: absolute;
+    right: 33%;
+    top: 13%;
+}
+
+#first img {
+    height: 14vw;
+}
+
+#sec {
+    position: absolute;
+    right: 46%;
+    top: 26%;
+}
+
+#sec img {
+    height: 4vw;
+}
+
+#paragraph {
+    position: absolute;
+    right: 20%;
+    top: 75%;
+}
+
+#paragraph h4 {
+    font-size: 2.7vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+#second {
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    right: 0;
+    top: 0;
+}
+
+#second img {
+    height: 100%;
+    width: 100%;
+    padding-right: 7vw;
+    object-fit: cover;
+    object-position: center;
+    padding-bottom: 2vw;
+}
+
+#third_part {
+    padding: 5vh 9vh;
+    height: 70vh;
+}
+
+#third_part img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#fourth_part {
+    height: 80vh;
+    padding: 0 2vw;
+}
+
+#fourth_part>h1 {
+    font-size: 2.5vw;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: top;
+    margin-bottom: 5vw;
+}
+
+.elem {
+    height: 15vh;
+    width: 100%;
+    border-top: 2px solid black;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.elem:nth-last-child(1) {
+    border-bottom: 2px solid black;
+}
+
+.elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.first-elem {
+    width: 65vh;
+    height: 14vh;
+    position: relative;
+}
+
+.first-elem h4 {
+    font-size: 1.1vw;
+    width: 6%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: absolute;
+    bottom: 32%;
+    left: 5%;
+}
+
+.first-elem img {
+    opacity: 0;
+    transition: all ease 0.3s;
+    height: 7vw;
+    width: 7vw;
+    object-fit: cover;
+    position: absolute;
+    right: 10%;
+    bottom: 7%;
+    object-position: top;
+    border-radius: 50%;
+}
+
+.elem:hover img {
+    opacity: 1;
+    right: 40%;
+}
+
+.elem:hover {
+    background-color: #dfdddd;
+}
+
+.second-elem {
+    width: 45%;
+    margin-top: 2vw;
+    margin-bottom: 3vh;
+}
+
+.second-elem h4 {
+    font-size: 2.4vw;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.second-elem h5 {
+    font-size: 1.67vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#fifth_part {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 5vw;
+}
+
+
+#fifth_1 {
+    height: 100%;
+    width: 38%;
+}
+
+
+#fifth_1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+#fifth_2 {
+    height: 100%;
+    width: 60%;
+    position: relative;
+}
+
+.elem_1 {
+    position: absolute;
+    top: 4%;
+}
+
+.elem_1 h1 {
+    font-size: 2.7vw;
+    font-family: top;
+    text-transform: uppercase;
+}
+
+.elem_2 {
+    position: absolute;
+    top: 17%;
+}
+
+.elem_2 h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.elem_3 {
+    position: absolute;
+    top: 36%;
+}
+
+.elem_3 h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.elem_4 {
+    height: 45%;
+    width: 53%;
+    position: absolute;
+    bottom: 0;
+}
+
+.elem_4 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.elem_5 {
+    height: 45%;
+    width: 45%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.elem_5 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#sixth {
+    height: 90vh;
+    width: 100%;
+    padding: 5vw;
+    position: relative;
+}
+
+#sixth img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#sixth h5 {
+    position: absolute;
+    color: white;
+    top: 12%;
+    right: 7%;
+    font-size: .9vw;
+    padding: .8vh 1.2vh;
+    border-radius: 50%;
+    border: .8px solid white;
+}
+
+#seventh {
+    height: 120vh;
+    width: 100%;
+    padding: 3vw 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#seven-1 {
+    height: 100%;
+    width: 50%;
+}
+
+#seven-1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#seven-2 {
+    height: 100%;
+    width: 45%;
+    position: relative;
+}
+
+#seven-i {
+    height: 75%;
+    width: 100%;
+}
+
+#seven-i img {
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+#seven-ii {
+    position: absolute;
+    padding-top: 2vw;
+}
+
+#seven-ii h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+#seven-iii {
+    position: absolute;
+    right: 0;
+    padding-top: 2vw;
+}
+
+#seven-iii h5 {
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+#eight {
+    height: 10vh;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#lines {
+    display: inline-block;
+    animation-name: run;
+    animation-duration: 10s;
+    margin-top: 1vw;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes run {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#lines h4 {
+    font-size: 3vw;
+    letter-spacing: 2px;
+    font-family: top;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: transparent;
+    gap: .2px;
+    -webkit-text-stroke: 1px black;
+}
+
+#ninth {
+    height: 72vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5vw;
+}
+
+#part-i {
+    height: 100%;
+    width: 20%;
+    position: relative;
+}
+
+#part-i h1 {
+    position: absolute;
+    font-family: top;
+    left: 30%;
+    text-transform: uppercase;
+}
+
+#part-ii {
+    height: 100%;
+    width: 35%;
+    position: relative;
+}
+
+#part-ii img {
+    height: 80%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    bottom: 0;
+}
+
+#part-ii-1 {
+    display: flex;
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+
+#part-ii-1 h5 {
+    height: fit-content;
+    padding: .3vh .9vh;
+    margin-right: .8vh;
+    font-size: 1.6vh;
+    font-family: Arial, Helvetica, sans-serif;
+    border: .1px solid black;
+    border-radius: 50%;
+}
+
+#part-ii-1 h4 {
+    font-size: 1.6vh;
+    font-size: 1.7vh;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#part-iii {
+    height: 100%;
+    width: 35%;
+    position: relative;
+}
+
+#part-iii img {
+    height: 80%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    bottom: 0;
+}
+
+#part-iii-1 {
+    display: flex;
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+
+#part-iii-1 h5 {
+    height: fit-content;
+    padding: .3vh .9vh;
+    margin-right: .8vh;
+    font-size: 1.6vh;
+    font-family: Arial, Helvetica, sans-serif;
+    border: .1px solid black;
+    border-radius: 50%;
+}
+
+#part-iii-1 h4 {
+    font-size: 1.6vh;
+    font-size: 1.7vh;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    justify-content: space-evenly;
+}
+
+#left {
+    width: 40%;
+    display: flex;
+    padding: 1vw 4vw;
+    border-right: 2px solid black;
+    justify-content: space-between;
+}
+
+#left h2 {
+    font-family: top;
+    font-size: 3vw;
+    position: relative;
+}
+
+#left h2::after {
+    content: "©";
+    position: absolute;
+    font-family: gilroy;
+    font-size: 1.2vw;
+    font-weight: 400;
+    color: black;
+}
+
+#left h2::before {
+    content: "model management";
+    position: absolute;
+    font-weight: 400;
+    font-family: gilroy;
+    letter-spacing: .1px;
+    font-size: 1vw;
+    right: 6%;
+    top: 19%;
+}
+
+#left h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6vw;
+    margin-top: .8vw;
+    margin-right: .8vw;
+    font-weight: 500;
+}
+
+#middle {
+    width: 15%;
+    height: 100%;
+    padding: 2vw;
+    border-right: 2px solid black;
+}
+
+#middle h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vw;
+    font-weight: 500;
+    margin-left: 1vw;
+}
+
+#right {
+    width: 40%;
+    position: relative;
+}
+
+#right h3 {
+    margin-top: 2vw;
+    margin-left: 2vw;
+    height: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+#icons {
+    display: flex;
+    margin-left: 2vw;
+    gap: 2vw;
+}
+
+#ending {
+    position: absolute;
+    bottom: 25%;
+    left: 4.9%;
+}
+
+#last {
+    height: 5vh;
+}
