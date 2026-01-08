@@ -1,11 +1,11 @@
 @font-face {
     font-family: top;
-    src: url(./MonumentExtended-Regular.ttf);
+    src: url(./MonumentExtended-Regular.woff2);
 }
 
 @font-face {
     font-family: left;
-    src: url(./NimbusSanL-Reg.ttf);
+    src: url(./NimbusSanL-Reg.woff2);
 }
 
 * {
